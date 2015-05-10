@@ -3,6 +3,12 @@ console.log('hello');
 $(document).ready(function() {
 
 	soundManager.onload = function () {
+	var backgroundAudio = soundManager.createSound ({
+		url:'audiofiles/Background18plusCrow.m4a'
+	});
+	backgroundAudio.play();
+
+
 	var crow1 = soundManager.createSound({
 		url:'audiofiles/crowAlex.m4a'
 	});
@@ -18,7 +24,9 @@ $(document).ready(function() {
 		
 
 
-		crow1.play();
+		crow1.play({
+			volume:10
+		});
 		// $(this).attr("src", "img/crow.png");
 
 	})
